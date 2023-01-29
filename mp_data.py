@@ -4,7 +4,7 @@ import numpy as np
 import json
 import time
 
-# 
+
 headers = {
     "authority": "mpstats.io",
     "accept": "application/json, text/plain, */*",
@@ -61,7 +61,7 @@ def parse_data(mp, end_row, start_row=0, **params):
             
             r = requests.request("POST", url, json=payload, headers=headers, params=querystring).text
 
-            # созраняем рекквест в json
+            # сохраняю реквест в json
             jsn = json.loads(r)
             
             # создаю дполнительный ключ с датой, так как в изначальных выгружаемых данных его нет
